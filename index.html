@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ordbook</title>
+  
+  <style>
+  
+    
+.nutid{position: relative;
+    z-index: -2;
+    left: 30px;
+    min-width: 90px;
+    max-width: 120px;
+    padding: 0 5px;
+    border-radius: 5px;
+    height: 42px;
+    background-color: rgb(121, 95, 160);
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.datid{position: relative;
+    left: -70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    min-width: 80px;
+    max-width: 120px;
+    padding: 0 10px;
+    height: 42px;
+    border-radius: 5px;
+    background-color: rgb(101, 160, 95);
+    transition: 0.5s;
+}
+.fornutid{position: absolute;
+    left: 20px;
+    z-index: -3;
+    min-width: 80px;
+    max-width: 120px;
+    padding: 0 10px;
+    height: 42px;
+    border-radius: 5px;
+    background-color: cadetblue;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bydem{position: absolute;
+    left: 35px;
+    z-index: 3;
+    min-width: 80px;
+    max-width: 120px;
+    padding: 0 10px;
+    height: 42px;
+    border-radius: 5px;
+    background-color: cadetblue;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fordatid{position: absolute;
+    left: 35px;
+    z-index: -3;
+    min-width: 80px;
+    max-width: 120px;
+    padding: 0 10px;
+    height: 42px;
+    border-radius: 5px;
+    background-color: cadetblue;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.translate-nutid
+{position: absolute;
+    left: 35px; border-radius: 5px;
+    top: 100px;
+    z-index: -6;
+    min-width: 100px;
+    max-width: 150px;opacity: 0;
+    height: 30px;padding-bottom: 2px;
+    background-color: cadetblue;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;transition-delay: 0.4s;
+    justify-content: center;
+}  
+.translate-fordatid
+{position: absolute;
+    left: 35px; border-radius: 5px;
+    top: -96px;
+    z-index: -6;
+    min-width: 100px;
+    max-width: 150px;opacity: 0;
+    height: 30px;padding-bottom: 2px;
+    background-color: cadetblue;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;transition-delay: 0.4s;
+    justify-content: center;
+}  
+.translate-datid
+{position: absolute;
+    left: -115px; border-radius: 5px;
+    top: 64px;
+    z-index: -6;
+    min-width: 100px;
+    max-width: 150px;opacity: 0;
+    height: 30px;padding-bottom: 2px;
+    background-color: cadetblue;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;transition-delay: 0.4s;
+    justify-content: center;
+}  
+.translate-fornutid
+{position: absolute;
+    left: 169px; border-radius: 5px;
+    top: 64px;
+    z-index: -6;
+    min-width: 100px;
+    max-width: 150px;opacity: 0;
+    height: 30px;padding-bottom: 2px;
+    background-color: cadetblue;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;transition-delay: 0.4s;
+    justify-content: center;
+}  
+.btn
+{position: absolute;
+    left: 70px; border-radius: 5px;
+    top: 61px;
+    z-index: -6;
+    width: 30px;
+    font-size: 20px;opacity: 0;
+    height: 30px;padding-bottom: 2px;
+    background-color: cadetblue;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;transition-delay: 1s;
+    justify-content: center;
+} 
+
+        label{
+            margin-bottom: 100px;margin-left: 60px;margin-right: 60px;
+        }
+     .container {
+  display: inline-flex;
+  position: relative;
+  padding-left: 5px;
+
+  margin-bottom: 202px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.q .container.hide {
+	display: none;
+}
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.menu{
+  text-decoration: none;
+  color: #fff;
+  margin-left: 10px;
+  border-radius: 10px;
+  background: #8892b0;
+  padding:3px 20px;
+}
+/* Create a custom checkbox */
+.infinitive {  display: flex;
+  position: absolute;
+align-items: center;
+justify-content: center;
+  top: -5;
+  left: 0;
+  height: 55px;
+  width:169px;
+  color: aliceblue;
+  border-radius: 10px;
+  background-color: #28314e;
+}
+.tag{position: absolute;
+    left: 35px; border-radius: 5px;
+    top: -96px;
+    z-index: -6;
+    width: 100px;opacity: 0;
+    height: 22px;padding-bottom: 2px;
+    background-color: rgb(186, 186, 186);
+    transition: 0.5s;
+    display: flex;
+    align-items: center;transition-delay: 1s;
+    justify-content: center;
+}
+/* On mouse-over, add a grey background color */
+
+
+/* When the checkbox is checked, add a blue background */
+
+.container input:checked ~.nutid {
+  transform: translateY(100px);
+}
+.container input:checked ~.datid {
+ transform:  translate(-150px ,60px);
+}
+.container input:checked ~.fornutid {
+ transform: translate(149px,60px);
+}
+.container input:checked ~.fordatid {
+  transform: translateY(-100px);
+}
+.container input:checked ~.translate-nutid {
+ opacity: 1;  transform: translateY(42px);
+}
+.container input:checked ~.translate-datid {
+ opacity: 1;  transform: translateY(38px);
+}
+.container input:checked ~.translate-fornutid {
+ opacity: 1;  transform: translateY(38px);
+}
+.container input:checked ~.translate-fordatid {
+ opacity: 1;  transform: translateY(38px);
+}
+.container input:checked ~.btn {
+ opacity: 1; z-index: 6;
+}
+.container input:checked ~.tag {
+ opacity: 1;  transform: translateY(-25px);
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.infinitive:after {
+  content: "";
+  position: absolute;
+  display: flex;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .infinitive:after {
+  display: flex;
+}
+
+/* Style the checkmark/indicator */
+@media (width>1100px){
+  .infinitive {  display: flex;
+  position: absolute;
+align-items: center;
+justify-content: center;
+  top: -5;
+  left: 0;
+  height: 55px;
+  width:169px;
+  color: aliceblue;
+  border-radius: 10px;
+  background-color: #28314e;
+}
+  .datid{position: relative;
+    left: -101px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    min-width: 80px;
+    max-width: 120px;
+    padding: 0 10px;
+    height: 42px;
+    border-radius: 5px;
+    background-color: rgb(101, 160, 95);
+    transition: 0.5s;
+}
+.translate-datid
+{position: absolute;
+    left: -116px; border-radius: 5px;
+    top: 64px;
+    z-index: -6;
+    min-width: 100px;
+    max-width: 150px;opacity: 0;
+    height: 30px;padding-bottom: 2px;
+    background-color: cadetblue;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;transition-delay: 0.4s;
+    justify-content: center;
+} 
+  .q{position: relative;
+  left: 10%;
+  display: inline-grid;
+  grid-template-columns: repeat(3,1fr);
+
+}
+#elastic{position: absolute;
+  left: 40%;
+  top: 7%;
+  
+  scale: 1.5;
+}
+.container input:checked ~.datid {
+ transform:  translate(-120px ,60px);
+}
+}
+
+
+@media (width<1100px){
+  .container {
+  display: inline-flex;
+  position: relative;
+  padding-left: 5px;
+scale: 1.2;
+  margin-bottom: 202px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+  .translate-datid
+{position: absolute;
+    left: -110px; border-radius: 5px;
+    top: 64px;
+    z-index: -6;
+    min-width: 100px;
+    max-width: 150px;opacity: 0;
+    height: 30px;padding-bottom: 2px;
+    background-color: cadetblue;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;transition-delay: 0.4s;
+    justify-content: center;
+}  
+#elastic{position: absolute;
+  left: 40%;
+  top: 2%;
+  
+  scale: 1.7;
+}
+  .q{position: relative;
+  left: 15%;
+  display: inline-grid;
+  grid-template-columns: repeat(2,1fr);
+
+} 
+.datid{position: relative;
+    left: -103px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    min-width: 80px;
+    max-width: 120px;
+    padding: 0 10px;
+    height: 42px;
+    border-radius: 5px;
+    background-color: rgb(101, 160, 95);
+    transition: 0.5s;
+}
+.menu{
+  text-decoration: none;
+  color: #fff;scale: 1.4;
+  margin-left: 10px;
+  border-radius: 10px;
+  background: #8892b0;
+  padding:3px 20px;
+}
+.container input:checked ~.datid {
+ transform:  translate(-109px ,60px);
+}
+}
+.item{
+  background-color: aqua;
+}
+.page{position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(216, 216, 216, 0.212);
+  z-index: 10;
+}
+.t{
+  height: 200px;
+}
+.info{
+  width: 450px;
+  min-height: 230px;
+  border-radius: 20px;
+  background-color: #fff;
+  border:2px solid #aaa;
+  padding: 30px;
+  padding-top: 30px;
+}
+.plus{
+  position: absolute;
+  top: 455px;
+  left: 785px;
+  border-radius: 7px;
+  width: 38px;
+  height: 38px;
+}
+.minus{
+  position: absolute;
+  top: 455px;
+  left: 670px;
+  border-radius: 7px;
+  width: 38px;
+  height: 38px;
+}
+.txt{
+  position: absolute;
+  top: 455px;
+  left: 735px;
+  border-radius: 7px;
+  width: 38px;
+  height: 38px;
+}
+.pagination{font-size: 23px;line-height: 35px;}
+.i{
+  position: relative;
+  top: -120px;
+  left: -55px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  font-size: 20px;
+  color: #aaa;
+  background-color: rgba(240, 248, 255, 0);
+}
+#id{
+            width: 500px;
+            background-color: rgb(167, 113, 42);
+            height: 200px;
+            position: absolute;
+            left: 30%;
+            border: 3px solid #aaa;
+            border-radius: 15px;
+        }
+   
+
+  </style>
+</head>
+<body>
+  <h1>verbum</h1>
+<a href="verbum.html" class="menu">vb </a>
+<a href="advb.html" class="menu">advb </a>
+<a href="konj.html" class="menu">konj </a>
+<a href="adj.html" class="menu">adj </a>
+<a href="præp.html" class="menu">præp </a>
+<a href="pronomer.html" class="menu">pronomer</a>
+<div class="header"></div>
+  <input type="text" id="elastic">
+  <div class="t"></div>
+  <div id="t"></div>
+  <div class="q">
+
+</div>
+
+
+<script>
+  var q=document.querySelector('.q');
+  function ord2(anfinitiv,nutid,datid,fornutid,fordatid,button){
+    const labe2l=document.createElement('label');
+    if(fordatid==0&&button==0){labe2l.innerHTML=`<input type="radio" id="huey" name="drone" value="huey"  />
+        <span class="infinitive">accepteret</span>  <span class="nutid">${nutid}</span><span class="datid">${datid}</span>
+        <span class="fornutid">${fornutid}</span>`;
+        
+}
+else if(button==0){labe2l.innerHTML=`<input type="radio" id="huey" name="drone" value="huey"  />
+        <span class="infinitive">accepteret</span>  <span class="nutid">${nutid}</span><span class="datid">${datid}</span>
+        <span class="fornutid">${fornutid}</span><span class="fornutid">${fordatid}</span><span class="tag"></span>`;
+        
+}
+
+
+else if(fordatid==0){
+  labe2l.innerHTML=`<input type="radio" id="huey" name="drone" value="huey"  />
+        <span class="infinitive">accepteret</span>  <span class="nutid">${mas[i]}</span><span class="datid">${mas[i+=1]}</span>
+        <span class="fornutid">${mas[i+=1]}</span>  
+        <span class="translate-nutid">${mas[i+=1]}</span> <span class="translate-datid">${mas[i+=1]}</span>
+        <button class="btn">...</button>`;
+}
+
+
+else{ div.innerHTML= `<div class="anfinitiv">${anfinitiv}</div><div class="nutid">${nutid}</div>
+    <div class="datid">${datid}</div><div class="fornutid">${fornutid}</div>
+    <div class="fordatid">${fordatid}</div><div class="bydem">${bydem}</div>
+    <button>uh</button>`;}
+   q.appendChild(labe2l);
+}
+let ii=0;
+let r=0;
+let f=0;
+let ord=[[0,1,2],[1,2,3,4]];
+ord[0][0]=`uhrhfeugihoj
+wofihofnbwiohpn`;
+
+ord[0][1]=`u2hrhfeugihoj
+wofihofnbwiohpn`;
+ord[0][2]=`uhrhfeugihoj
+wofihofnbwiohpn
+wjjfepjwpfw
+wfwpmfpwjfwnf
+wfwnfpwnfownfowfo`;
+
+function foo(infinitiv,nutid,datid,fornutid,fordatid,translatenutid,translatedatid,translatefornutid,translatefordatid,tag){
+
+
+if(fordatid==0){
+  return `<input type="radio" id="huey" name="drone" value="huey"  />
+        <span class="infinitive">${infinitiv}</span>  <span class="nutid">${nutid}</span><span class="datid">${datid}</span>
+        <span class="fornutid">${fornutid}</span> 
+        <span class="translate-nutid">${translatenutid}</span> <span class="translate-datid">${translatedatid}</span><span class="translate-fornutid">${translatefornutid}
+        `;
+}else{
+  
+    return `<input type="radio" id="huey" name="drone" value="huey"  />
+        <span class="infinitive">${infinitiv}</span>  <span class="nutid">${nutid}</span><span class="datid">${datid}</span>
+        <span class="fornutid">${fornutid}</span>  <span class="fordatid">${fordatid}</span>
+        <span class="translate-nutid">${translatenutid}</span> <span class="translate-datid">${translatedatid}</span><span class="translate-fornutid">${translatefornutid}</span><span class="translate-fordatid">${translatefordatid}</span><span class="tag">${tag}</span>
+        `;
+  }
+
+}
+
+ord[1][1]=`1
+1
+1
+1
+1
+1
+`;
+// 5 strok po 42 bukBe
+let mm=[
+  [1,  
+  `at sige= говорити
+  викорисовуется коли ми хочемо 
+  щось сказати чи пояснити.`],
+  [1,  
+  `at snakke= балакати
+  викорисовуется коли ми хочемо 
+  щось сказати друзям чи родині, не офіційно.`],
+  [1,  
+  `at tale= говорити
+  викорисовуется коли ми хочемо 
+  щось росповісти шось важливе, офіційно.`],
+  [1,  `at mene= вважати
+  залежно від контексту може ще
+  перекладатися як= мати на увазі.`],
+   [1,  `at tro= думати
+  в деяких випадках 
+  може перекладатися як= здається,вірю.
+  Хоча так кажуть навіть данці,
+  всеж 
+  для 'здається' краще використовувати synes`],
+  [1,  `at pleje= зазвичай
+  ще може вживатися як дбати, піклуватися`],
+  [1,  `at slukke= вимикати
+  ще використовуется як=
+  припинення, закінчення.`],
+  [1,  `at tænde= вмикати
+  хоча це слово використовують як ввімкнути
+  але воно може значити сексуальне збудження,
+  не хвилюйтеся це залежить від теми розмови.`],
+  [1,  `at give= давати, подарувати`],
+  [3, `at tage= брати
+  ще може перекладатися= як схопити, іноді= займає час.
+  `,`вживаєтся з іменником, щоб сказати що щось
+  розвивається, змінюється певним чином,
+  вживаєтся з дієсловом щоб попросити.
+  Чи як дотик до тіла, як мед огляд, 
+  так і сексуальний.
+  Все залежить від контексту.`,
+  `at tage  вживається коли ми щось беремо.
+  його можно використовувати в ріних 
+  контекстах, 
+`],
+  [1,`at ville= хотіти, бажати, мета, намір
+  у цого слова є одна властивість,
+  з його допомогою можно сформувати
+  майбутній час приклад= 
+ теперішний час= vi går til butik
+ майбутній час=  vi vil gå til butik `],
+  [1, `at trykke= натискати, тиснути, 
+  ще так кажуть про друк
+  `],
+  [1, `at gide= хотіти,
+   мати єнергію для...`],
+  [1,     `at trodse= протидіяти
+  не піддаватися впливу,
+  кинути виклик.
+  `],
+  [1, `at sande= правда, визнати, роспізнати
+  треба знати що є переклад піщаний,
+   хочь данці ізрозуміють,
+    але google перекладачь ні.`],
+  [1, `at råde= керувати, радити, 
+  можлтвість використовувати`],
+  [1, `at lade= дозволити, можно
+  подбати про те, щоб щось сталося.
+  Ще може вживатися як давайте...
+  переклад цого слова є контекстним,
+  і може трішки відрізнятися але не сильно.`],
+
+  [1,   `at udtale= вимовляти
+  висловлювати думку,
+  може використовуватися як вирок чи наказ.`],
+  [1,  `at medvirke= брати участь
+  ще може використовуватися як сприяє чи
+   причина.`],
+  [1,   `at mangle= бракує, відсутнє,
+  не вистачає
+  мати потребу в...`  ],
+  [1,   `at kigge= дивитися, 
+  шукати поглядом, озирнутися, поглянути, 
+  придивлятися.`],
+  [1,  `at medføre= спричинити, призвести до.
+  формально може використовуватися як
+  взяти з собою.`],
+  [1, `at trænge= треба, потрібно
+  може використовуватися як пробиватися,
+  просочуватися крізь, відтіснути, 
+  текти в певному напрямку.`],
+  [1,`також може перекладатися як пісок.`],
+  [1,`at dufte= приємно пахне
+  але є ще два слова
+  at lugte= характерний запах
+  at stinke= жахливо пахне`],
+  [1,`at lugte= характерний запах
+  але є ще два слова
+  at dufte= приємно пахне
+  at stinke= жахливо пахне`],
+  [1,`at stinke= жахливо пахне
+  але є ще два слова
+  at lugte= характерний запах
+  at dufte= приємно пахне`],
+  [1,`at levere= доставляти, дати, постачати,
+  добре працювати в напруженій сетуації.`],
+  [1,`at slytte= закінчити
+  переклад цого слова є контекстним,
+  але сенс не змінюється.`],
+  [1,`at holde= тримати, утримувати,
+  влаштовувати чи проводити свято,
+  чи щось урочисте.
+  Не продовжувати, містить.`],
+
+  [1,`at knappe= щось кріпити за допомогою гудзиків`],
+  [1,`test text`],
+  [1,`test text`],
+  [1,`test texttest texttest texttest texttest texttest texttest texttest text`],
+  [1,`test text`],
+  [1,`test text`],
+  [1,`test text`],
+  [1,`test text`],
+  [1,`test text`],
+  [1,`test text`],
+  [1,`test text`],
+  [1,`test text`],
+  [1,`test text`],
+  [1,`test text`],
+  [1,`test text`],
+  [1,`test text`],
+  [1,`test text`],
+  [4,   `wfegrtrf
+  efgrfe
+  efg   vgyhujnbdhvgscfdgysuhjfbdvdwetrthgrteg
+  rfe
+  ofehirjofwojihugyfyguhnbeguh`,
+  `ihegh
+  wfihwfhiw
+  wofwfhfiw`,'grytyj','defgr']];
+
+let u=1;
+  let mas=[
+//infinitive   nutid       datid       fornutid      fordatid tr-nutid   tr-datid     tr-fornutid tr-fordatid
+'acceptere','accepterer','acceptede',  'accepteret',    0,    'приймаю',   'прийняв',   'прийняв',   '5', 'vb',1,
+'begynde','  begynder',    'begynte',   'begyndt',      0,     'почав',    'почав',      'почав',    'uy',  0,1,
+'spise',     'spiser',     'spiste',     'spist',       0,       'їм',       'їв',         'їв',   'kjhg',  0,1,
+'foretrække','foretrækker','foretrak',  'foretrukket',  0,    'схилятися', 'схилявся',   'схилявся',  '5',  0,1,
+'købe',        'køber',     'købte',       'købt',      0,     'купляю',     'купив',     'купив',    'ugy',0,1,
+'bo',           'bor',      'boede',       'boet',      0,      'живу',       'жив',       'жив',     'ugy',0,1,
+'sige',        'siger',     'sagde',       'sagt',      0,     'говорю',    'говорив',    'говорив',  'ugy',0,0,
+'snakke',     'snakker',   'snakkede',    'snakket',    0,    'балакати',   'балакав',    'балакав',  'ugy',0,0,
+'tale',        'taler',     'talte',        'talt',     0,    'говорити',   'говорив',    'говорив',  'ugy',0,0,
+'indebære',  'indebarer',   'indebar',    'indebåret',  0,   'маю.на.увазі','мав.на.увазі','мав.на.увазі','ugy',0,1,
+'forklare',  'forklarer', 'forklarede',   'forklaret',  0,      'пояснюю',  'пояснив',    'пояснив',  'ugy',0,1,
+'vente',      'venter',     'ventede',      'ventet',   0,      'чекаю',     'чекав',      'чекав',   'ugy',0,1,
+'læse',       'læser',      'læste',        'læst',     0,      'читаю',     'читав',      'читав',   'ugy',0,1,
+'få',          'får',        'fik',         'fået',    'få',    'отримую',   'отримав',   'отримав',  'мало','adj',1,
+'mene',       'mener',      'mente',        'ment',     0,      'вважаю',     'вважав',   'вважав',    'ugy',0,0,
+'synes',      'synes',     'syntes',       'syntes',    0,     'здається',   'здавалось','здавалось',  'ugy',0,1,
+'tro',        'tror',      'troede',       'troet',     0,      'думаю',       'думав',    'думав',    'ugy',0,0,
+'vågne',      'vågner',    'vågnede',     'vågnet',     0,    'прокидаюсь',  'прокинувся','прокинувся','ugy',0,1,
+'melde',      'melder',     'meldte',      'meldt',     0,    'повідомляю',   'повідомив','повідомив', 'ugy',0,1,
+'lave',       'laver',      'lavede',      'lavet',     0,      'роблю',       'робив',     'робив',   'ugy',0,1,
+'pleje',      'plejer',     'plejede',    'plejet',     0,     'зазвичай',    'зазвичай',  'зазвичай', 'ugy',0,0,
+'besøge',     'besøger',    'besøgte',    'besøgt',     0,    'відвідуваю',  'відвідував','відвідував','ugy',0,1,
+'betyde',     'betyder',    'betydede',   'betydet',    0,      'означає',    'означало',   'означало','ugy',0,1,
+'ændre',      'ændrer',     'ændrede',    'ændret',     0,       'змінюю',      'змінив',   'змінив',  'ugy',0,1,
+'tænke',      'tænker',     'tænkte',      'tænkt',     0,      'думаю',        'думав',    'думав',   'ugy',0,1,
+'kunne',       'kan',        'kunne',     'kunnet',     0,        'можу',        'міг',      'міг',    'ugy',0,1,
+'bedre',      'bedrer',     'bedrede',    'bedret',  'bedre',   'покращюю',   'покращен',  'покращен',    'краще','adj','bedre',
+'dele',        'deler',        'delte',     'delt',    'del',     'розділити','розділено', 'розділено','частина','sub',1,
+'gå',          'går',          'gik',      'gået',      0,        'йду',        'йшов',     'йшов',    'ugy',0,1,
+'komme',      'komme',         'kom',     'kommet',  'komme',    'прийшов',    'прийшов',  'прийшов',    'приходити','sub',1,
+'forlade',   'forlader',     'forlod',    'forladt',    0,       'залишаю',    'залишав',  'залишав',  'ugy',0,1,
+'slukke',    'slukker',     'slukkede',   'slukket',    0,       'вимикаю',  'вимнкнений','вимнкнений','ugy',0,0,
+'tænde',      'tænder',      'tændte',     'tændt',     0,       'вмикаю',    'ввімкнув', 'ввімкнув',  'ugy',0,0,
+'give',        'giver',        'gav',      'givet',     0,        'даю',        'давав',   'давав',    'ugy',0,0,
+'være',         'er',          'var',      'været',     0,         'є',          'був',     'був',      'ugy',0,1,
+'tage',        'tager',        'tog',      'taget',     0,        'бєру',       'брав',     'брав',    'ugy',0,0,
+'ville',        'vil',        'vil',       'vilt',      0,        'хочу',       'хотів',   'хотів',    'ugy',0,0,
+'trykke',     'trykker',    'trykkede',   'trykket',    0,        'тисну',     'тиснув',   'тиснув',   'ugy',0,0, 
+'åbne',        'åbner',      'åbnede',     'åbnet',     0,       'відчиняю' ,  'відчинив','відчинив',  'ugy',0,1,
+'gide'        ,'gider',        'gad',      'gidet',     0,        'хочу',       'хотів',    'хотів',   'ugy',0,0,
+'låse',        'låser',       'låste',     'låst',      0,       'замикаю',    'замнкнув', 'замнкнув', 'ugy',0,1,
+'læse',        'læser',       'læste',     'læst',      0,        'читаю',     'читав',    'читав',    'ugy',0,1,
+'trodse',     'trodser',    'trodsede',   'trodset', 'trods',   'протидію',   'протидіяв','протидіяв', 'незвадаючи.на','præp',0,
+'samtale',    'samtaler',   'samtalede', 'samtalet',    0,     'розмовляю',   'розмовляв','розмовляв', 'ugy',0,1, 
+'stige',      'stiger',       'steg',      'steget',    0,      'зростаю',    'зростав',   'зростав',  'ugy',0,1,
+'blive',       'blive',       'blev',     'blivet',     0,        'cтає',       'cтав',     'cтав',    'ugy',0,1,
+'sande',      'sander',      'sandede',   'sandet',     0,        'правда',    'правда',   'правда',   'ugy',0,0,
+'råde',        'råder',      'rådede',     'rådet',     0,        'керую',     'керував',  'керував',  'ugy',0,0,
+'lade',        'lader',        'lod',      'ladet',   'lad',    'дозволено',   'дозволив', 'дозволив', 'ледачій','adj',0, 
+'vise',        'viser',       'viste',     'vist',    'vis',     'показую',    'показав',  'показав',  'досвітчений', 'adj',1,
+'skubbe',    'skubber',      'skubbede',  'skubbet',    0,      'штовхаю',     'штовхав', 'штовхав',   'ugy',0,1,
+'udtale',     'udtaler',     'udtalte',   'udtalt',     0,      'вимовляю',   'вимовляв', 'вимовляв',  'ugy',0,0, 
+'gide',        'gider',        'gad',      'gidet',     0,        'хочу',       'хотів',    'хотів',   'ugy',0,1,
+//'måtte',        'må',        'måtte',      'måttet',    0,       'повинен',   'повинен',  'повинен',   'ugy',0,0, 
+'medvirke',  'medvirker',  'medvirkede','medvirket',    0,    'беру.участь','брав.участь','брав.участь','ugy',0,0,
+'mangle',     'mangler',     'manglede', 'manglet',     0,       'бракує',   'бракувало','бракувало',   'ugy',0,0, 
+'nikke',      'nikker',      'nikkede',   'nikket',     0,       'кивати',     'кивав',    'кивав',     'ugy',0,1, 
+'kigge',      'kigger',      'kiggede',   'kigget',     0,       'дивлюся',   'дивмвся',   'дивмвся',   'ugy',0,0, 
+'medføre',    'medfører',     'medførte',  'medført',   0,    'спричинити',  'спричинив','спричинив',   'ugy',0,0,
+'grine',      'griner',      'grinede',    'grint',     0,        'сміюся',   'сміявся',   'сміявся',   'ugy',0,1, 
+'gøre',        'gør',        'gjorde',     'gjort',     0,        'роблю',     'зробив',   'зробив',    'ugy',0,1, 
+'bruge',      'bruger',      'brugte',     'brugt',     0,  'використовую','використовував','використовував','ugy',0,1, 
+'kysse',      'kysser',      'kyssede',    'kysset',    0,        'цілую',     'цілував',  'цілував',   'ugy',0,1, 
+'trænge',     'trænger',    'trængete',    'trængt',    0,        'треба',      'треба',    'треба',    'ugy',0,0, 
+'reparere',  'reparerer',  'reparerede', 'repareret',   0,       'ремонтую','відремонтував','відремонтував','ugy',0,1, 
+'forbedre',  'forbedrer',  'forbedrede', 'forbedret',   0,       'покращую',  'покращено','покращено',  'ugy',0,1, 
+'beslutte',  'beslutter',  'besluttede', 'besluttet',   0,        'вирішив',   'вирішив',   'вирішив',  'ugy',0,1, 
+'tilføje',   'tilføjer',    'tilføjede',  'tilføjet',   0,        'додаю',      'додав',    'додав',    'ugy',0,1, 
+'sande',      'sander',      'sandede',   'sandet',   'sand' ,  'усвідомив',  'усвідомив','усвідомив',    'правда','adj',0, 
+'тест',        'тест',        'тест',      'тест',      0,        'тест',       'тест',     'тест',    'ugy',0,1, 
+'dufte',      'dufter',      'duftede',   'duftet',     0,        'приємно.пахло',       'приємно.пахне',     'приємно.пахло',    'ugy',0,0,
+'lugte',      'lugter',      'lugtede',   'lugtet',     0,        'характер.пахне',       'характер.пахло',     'характер.пахло',    'ugy',0,0, 
+'stinke',        'stinker',  'stinkede', 'stinket ',    0,        'жахливо.пахне',       'жахливо.пахло',     'жахливо.пахло',    'ugy',0,0, 
+'så',          'sår',         'såede',     'sået',    'så'  ,      'посипаю',    'посипав',  'посипав',   'так','adj',1, 
+'prøve',     'prøver',       'prøvede',   'prøvet',     0,        'пробую',   'спробував','спробував', 'ugy',0,1,
+'levere',    'leverer',     'leverede',   'leveret',    0,        'доставляю',       'доставив',     'доставив',    'ugy',0,0, 
+'slytte',        'slytter',        'slyttede',      'slyttet',      0,        'закінчую',       'закінчив',     'закінчив',    'ugy',0,0, 
+'nytte',        'nytter',        'nyttede',      'nyttet',      0,        'корисний',       'був.корисний',     'був.корисний',    'ugy',0,1,
+'holde',       'holder',      'holdt',    'holdt',      0,        'тримаю',       'тримав',     'тримав',    'ugy',0,0,
+'behøve'     ,'behøver', 'behøvede',  'behøvet',        0,   'потрібно','було.потрібно', 'було.потрібно', 'ugy',     0,1,
+'bekræfte'  ,'bekræfter','bekræftede','bekræftet',      0,  'підтверджую','підтверджував','підтверджував', 'ugy',     0,1,
+'bevæge'    ,'bevæger',     'bevægede',   'bevæget',    0,        'рухаю',     'рухав',    'рухав',    'ugy',0,1,
+'indgå',      'indgår',      'indgik',    'indgået',    0,    'є.частиною','був.частиною','був.частиною','ugy',0,1,
+'bestræbe', 'bestræber',   'bestræbte', 'bestræbt',     0,        'прагну',    'прагнув', 'прагнув',   'ugy',0,1, 
+'knappe',     'knapper',    'knappede',  'knappet',   'knap',        'тест',       'тест',     'тест',    'дефіцит','adj',0,
+'ligge',        'ligger',        'lå',      'ligget',      0,        'лежу',       'лежав',     'лежав',    'ugy',0,1,
+'lægge',        'lægger',        'lagde',      'lagt',      0,        'кладу',       'клав',     'клав',    'ugy',0,1,
+'tilhøre'   ,'tilhører',     'tilhørte',     'tilhørt','høre', 'належить',     'належало','належало','чути','vb',1,
+'тест',        'тест',        'тест',      'тест',      0,        'тест',       'тест',     'тест',    'ugy',0,1, 
+'тест',        'тест',        'тест',      'тест',      0,        'тест',       'тест',     'тест',    'ugy',0,1,
+'тест',        'тест',        'тест',      'тест',      0,        'тест',       'тест',     'тест',    'ugy',0,1,
+'тест',        'тест',        'тест',      'тест',      0,        'тест',       'тест',     'тест',    'ugy',0,1,
+'тест',        'тест',        'тест',      'тест',      0,        'тест',       'тест',     'тест',    'ugy',0,1, 
+'тест',        'тест',        'тест',      'тест',      0,        'тест',       'тест',     'тест',    'ugy',0,1,
+'тест',        'тест',        'тест',      'тест',      0,        'тест',       'тест',     'тест',    'ugy',0,1,
+'тест',        'тест',        'тест',      'тест',      0,        'тест',       'тест',     'тест',    'ugy',0,1
+]                              
+  for(let i=0;i<mas.length;i++){
+    const  q=document.querySelector('.q');
+        const labe2l=document.createElement('label');
+     labe2l.classList.add('container')
+     labe2l.innerHTML=foo(mas[i],mas[i+=1],mas[i+=1],mas[i+=1],mas[i+=1],mas[i+=1],mas[i+=1],mas[i+=1],mas[i+=1],mas[i+=1])
+const con=document.getElementsByClassName('container')
+     
+mas[i+=1];if(mas[i]==0){
+  const btn=document.createElement('button');
+        btn.classList.add('btn');
+        btn.innerHTML='...'
+        btn.setAttribute('id',ii);
+        labe2l.appendChild(btn); 
+        btn.addEventListener('click',()=>{r=1;let indd=btn.id;console.log(indd)
+          const divv=document.createElement('div');
+          divv.classList.add('page');
+          divv.innerHTML=`<div class="info"></div>`
+          document.body.appendChild(divv);
+          const btnX=document.createElement('button');
+          const page=document.querySelector('.page');
+          page.classList.add('pagebtn')
+          page.setAttribute('id','id2');
+          btnX.innerHTML='X';
+          btnX.classList.add('i');
+          page.appendChild(btnX);
+          btnX.addEventListener('click',()=>{
+            const m=document.getElementsByClassName('pagebtn');const m2=document.getElementById('id2');
+const paa2=m2.parentNode;
+paa2.removeChild(m2);
+          });
+          const textt=document.querySelector('.info');
+          const pagination=document.createElement('span');
+          pagination.classList.add('pagination');
+         let index=document.getElementsByClassName('btn');
+          pagination.innerText=mm[indd][r];
+          textt.appendChild(pagination);
+          const plus=document.createElement('button');
+          const minus=document.createElement('button');
+          const txt=document.createElement('span');
+          plus.classList.add('plus');
+          minus.classList.add('minus');
+          txt.classList.add('txt');
+          plus.innerHTML='>';
+          txt.innerText='1'+'/'+mm[indd][0];
+          minus.innerHTML='<';
+         console.log(indd,r);if(mm[indd][0]==1){} else{
+          textt.appendChild(minus);
+          textt.appendChild(plus);
+          textt.appendChild(txt);} 
+         plus.addEventListener('click',()=>{   r++; if(r>=mm[indd][0]){r=mm[indd][0]} console.log(f,r);      pagination.innerText=mm[indd][r];  txt.innerText=r+'/'+mm[indd][0];
+          textt.appendChild(pagination);});
+          minus.addEventListener('click',()=>{   r--;if(r<=1){r=1} console.log(f,r);     pagination.innerText=mm[indd][r];txt.innerText=r+'/'+mm[indd][0];
+          textt.appendChild(pagination);});
+        });     ii++;}
+
+q.appendChild(labe2l);
+        
+      
+      
+   
+}
+
+document.querySelector('#elastic').oninput = function(){
+    let val = this.value.trim().toLocaleLowerCase();
+    
+    let elasticItems = document.querySelectorAll('.q .container');
+    
+    if (val != ''){
+        elasticItems.forEach(function(elem){ 
+          if (elem.innerText.search(val) == -1) {
+            elem.classList.add('hide');
+          }
+          else { 
+            elem.classList.remove('hide');
+          }
+        });
+    }
+  }
+
+  function inserMark(string,pos,len ){    
+    return string.slice(0, pos)+ '<mark>' + string.slice(pos, pos+len) + '</mark>'+string.slice(pos+len);
+
+  }
+
+
+
+</script>
+
+</body>
+</html>
