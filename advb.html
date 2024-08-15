@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    
+    .nutid{position: absolute;
+    z-index: -2;
+    left: 30px;
+    min-width: 90px;
+    max-width: 120px;
+    padding: 0 5px;
+    border-radius: 5px;
+    height: 42px;
+    background-color: rgb(121, 95, 160);
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nutid2{position: absolute;
+    z-index: -2;
+    left: 30px;
+    min-width: 90px;
+    max-width: 120px;
+    padding: 0 5px;
+    border-radius: 5px;
+    height: 42px;
+    background-color: rgb(121, 95, 160);
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nutid3{position: absolute;
+    z-index: -2;
+    left: 30px;
+    min-width: 90px;
+    max-width: 120px;
+    padding: 0 5px;
+    border-radius: 5px;
+    height: 42px;
+    background-color: rgb(121, 95, 160);
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nutid4{position: absolute;
+    z-index: -2;
+    left: 30px;
+    min-width: 90px;
+    max-width: 120px;
+    padding: 0 5px;
+    border-radius: 5px;
+    height: 42px;
+    background-color: rgb(121, 95, 160);
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.datid{position: relative;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    min-width: 80px;
+    max-width: 120px;
+    padding: 0 10px;
+    height: 42px;
+    border-radius: 5px;
+    background-color: rgb(101, 160, 95);
+    transition: 0.5s;
+}.nutid5{position: absolute;
+    z-index: -2;
+    left: 30px;
+    min-width: 90px;
+    max-width: 120px;
+    padding: 0 5px;
+    border-radius: 5px;
+    height: 42px;
+    background-color: rgb(121, 95, 160);
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.datid5{position: relative;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    min-width: 80px;
+    max-width: 120px;
+    padding: 0 10px;
+    height: 42px;
+    border-radius: 5px;
+    background-color: rgb(101, 160, 95);
+    transition: 0.5s;
+}
+.datid2{position: relative;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    min-width: 80px;
+    max-width: 120px;
+    padding: 0 10px;
+    height: 42px;
+    border-radius: 5px;
+    background-color: rgb(101, 160, 95);
+    transition: 0.5s;
+}
+.fornutid{position: absolute;
+    left: 20px;
+    z-index: -3;
+    min-width: 80px;
+    max-width: 120px;
+    padding: 0 10px;
+    height: 42px;
+    border-radius: 5px;
+    background-color: cadetblue;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bydem{position: absolute;
+    left: 35px;
+    z-index: 3;
+    min-width: 80px;
+    max-width: 120px;
+    padding: 0 10px;
+    height: 42px;
+    border-radius: 5px;
+    background-color: cadetblue;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fordatid{position: absolute;
+    left: 35px;
+    z-index: -3;
+    min-width: 80px;
+    max-width: 120px;
+    padding: 0 10px;
+    height: 42px;
+    border-radius: 5px;
+    background-color: cadetblue;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.translate-nutid
+{position: absolute;
+    left: 30px; border-radius: 5px;
+    top: 100px;
+    z-index: -6;
+    min-width: 100px;
+    max-width: 150px;opacity: 0;
+    height: 30px;padding-bottom: 2px;
+    background-color: cadetblue;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;transition-delay: 0.4s;
+    justify-content: center;
+}  
+.translate-nutid2
+{position: absolute;
+    left: 120px; border-radius: 5px;
+    top: 89px;
+    z-index: -6;
+    min-width: 100px;
+    max-width: 150px;opacity: 0;
+    height: 30px;padding-bottom: 2px;
+    background-color: cadetblue;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;transition-delay: 0.4s;
+    justify-content: center;
+}  
+.translate-fordatid
+{position: absolute;
+    left: 35px; border-radius: 5px;
+    top: -96px;
+    z-index: -6;
+    width: 100px;opacity: 0;
+    height: 30px;padding-bottom: 2px;
+    background-color: cadetblue;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;transition-delay: 0.4s;
+    justify-content: center;
+}  
+.translate-datid
+{position: absolute;
+    left: -105px; border-radius: 5px;
+    top: 64px;
+    z-index: -6;
+    width: 100px;opacity: 0;
+    height: 30px;padding-bottom: 2px;
+    background-color: cadetblue;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;transition-delay: 0.4s;
+    justify-content: center;
+}  
+.translate-datid2
+{position: absolute;
+    left: -55px; border-radius: 5px;
+    top: 93px;
+    z-index: -6;
+    min-width: 100px;
+    max-width: 150px;opacity: 0;
+    height: 30px;padding-bottom: 2px;
+    background-color: cadetblue;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;transition-delay: 0.4s;
+    justify-content: center;
+}  
+.translate-fornutid
+{position: absolute;
+    left: 169px; border-radius: 5px;
+    top: 64px;
+    z-index: -6;
+    min-width: 100px;
+    max-width: 150px;opacity: 0;
+    height: 30px;padding-bottom: 2px;
+    background-color: cadetblue;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;transition-delay: 0.4s;
+    justify-content: center;
+}  
+.btn
+{position: absolute;
+    left: 70px; border-radius: 5px;display:none;
+    top: 61px;
+    z-index: -6;
+    width: 30px;
+    font-size: 20px;opacity: 0;
+    height: 30px;padding-bottom: 2px;
+    background-color: cadetblue;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;transition-delay: 0.5s;
+    justify-content: center;
+} .tag{position: absolute;
+    left: 35px; border-radius: 5px;
+    top: -96px;
+    z-index: -6;
+    width: 100px;opacity: 0;
+    height: 22px;padding-bottom: 2px;
+    background-color: rgb(186, 186, 186);
+    transition: 0.5s;
+    display: flex;
+    align-items: center;transition-delay: 1s;
+    justify-content: center;
+}
+
+        label{
+            margin-bottom: 100px;margin-left: 111px;margin-right: 115px;
+        }
+     .container {
+  display: inline-flex;
+  position: relative;
+  padding-left: 5px;
+
+  margin-bottom: 202px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.q .container.hide {
+	display: none;
+}
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.infinitive {  display: flex;
+  position: absolute;
+align-items: center;
+justify-content: center;
+  top: -5;
+  left: 0;
+  height: 55px;
+  width:169px;
+  color: aliceblue;
+  border-radius: 10px;
+  background-color: #28314e;
+}
+/* On mouse-over, add a grey background color */
+
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~.nutid5 {
+  transform: translateY(100px);
+}
+.container input:checked ~.datid5 {
+ transform:  translate(-120px ,60px);
+}
+.container input:checked ~.nutid {
+  transform:  translateY(50px)
+}
+.container input:checked ~.nutid2 {
+  transform:  translate(90px ,90px);
+}
+.container input:checked ~.nutid3 {
+  transform:  translate(70px ,80px);
+}
+.container input:checked ~.nutid4 {
+  transform:  translateY(100px);
+}
+.container input:checked ~.datid {
+  transform:  translate(-70px ,90px);
+}
+.container input:checked ~.datid2 {
+ transform:  translate(-70px ,80px);
+}
+.container input:checked ~.fornutid {
+ transform: translate(149px,60px);
+}
+#elastic{position: absolute;
+  left: 40%;
+  top: 7%;
+  
+  scale: 1.5;
+}
+.container input:checked ~.fordatid {
+  transform: translateY(-100px);
+}
+.container input:checked ~.translate-nutid {
+ opacity: 1;  transform: translateY(42px);
+}
+.container input:checked ~.translate-datid {
+ opacity: 1;  transform: translateY(38px);
+}
+.container input:checked ~.translate-nutid2 {
+ opacity: 1;  transform: translateY(42px);
+}
+.container input:checked ~.translate-datid2 {
+ opacity: 1;  transform: translateY(38px);
+}
+.container input:checked ~.translate-fornutid {
+ opacity: 1;  transform: translateY(38px);
+}
+.container input:checked ~.translate-fordatid {
+ opacity: 1;  transform: translateY(38px);
+}
+.container input:checked ~.btn:enabled {
+ opacity: 1; display:block;z-index: 6;
+}.container input:checked ~.tag {
+ opacity: 1;  transform: translateY(-25px);
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.infinitive:after {
+  content: "";
+  position: absolute;
+  display: flex;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .infinitive:after {
+  display: flex;
+}
+
+/* Style the checkmark/indicator */
+
+@media (width>1100px){
+  .infinitive {  display: flex;
+  position: absolute;
+align-items: center;
+justify-content: center;
+  top: -5;
+  left: 0;
+  height: 55px;
+  width:169px;
+  color: aliceblue;
+  border-radius: 10px;
+  background-color: #28314e;
+}
+  .q{position: relative;
+  left: 7%;
+  display: inline-grid;
+  grid-template-columns: repeat(3,1fr);
+
+}
+}
+
+@media (width<1100px){
+  .q{position: relative;
+  left: 2%;
+  display: inline-grid;
+  grid-template-columns: repeat(2,1fr);
+
+}
+#elastic{position: fixed;
+  left: 40%;
+  top: 2%;
+  
+  scale: 1.5;
+}
+}
+.item{
+  background-color: aqua;
+}
+.page{position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(216, 216, 216, 0.212);
+  z-index: 10;
+}
+.t{
+  height: 200px;
+}
+.txt{
+  position: absolute;
+  top: 455px;
+  left: 735px;
+  border-radius: 7px;
+  width: 38px;
+  height: 38px;
+}
+.info{
+  width: 450px;
+  min-height: 230px;
+  border-radius: 20px;
+  background-color: #fff;
+  border:2px solid #aaa;
+  padding: 30px;
+  padding-top: 30px;
+}
+.plus{
+  position: absolute;
+  top: 455px;
+  left: 785px;
+  border-radius: 7px;
+  width: 38px;
+  height: 38px;
+}
+.minus{
+  position: absolute;
+  top: 455px;
+  left: 670px;
+  border-radius: 7px;
+  width: 38px;
+  height: 38px;
+}
+.pagination{font-size: 23px;line-height: 35px;}
+.i{
+  position: relative;
+  top: -120px;
+  left: -55px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  font-size: 20px;
+  color: #aaa;
+  background-color: rgba(240, 248, 255, 0);
+}
+#id{
+            width: 500px;
+            background-color: rgb(167, 113, 42);
+            height: 200px;
+            position: absolute;
+            left: 30%;
+            border: 3px solid #aaa;
+            border-radius: 15px;
+        }
+  
+.menu{
+  text-decoration: none;
+  color: #fff;
+  margin-left: 10px;
+  border-radius: 10px;
+  background: #8892b0;
+  padding:3px 20px;
+}
+  </style>
+</head>
+<body>
+  <h1>adverbium</h1>
+<a href="index.html" class="menu">vb </a>
+<a href="advb.html" class="menu">advb </a>
+<a href="konj.html" class="menu">konj </a>
+<a href="adj.html" class="menu">adj </a>
+<a href="præp.html" class="menu">præp </a>
+<a href="pronomer.html" class="menu">pronomer </a>
+<div class="header"></div>
+  <input type="text" id="elastic">
+  <div class="t"></div>
+  <div id="t"></div>
+  <div class="q">
+
+</div>
+
+
+<script>
+  var q=document.querySelector('.q');
+  function ord2(anfinitiv,nutid,datid,fornutid,fordatid,button){
+    const labe2l=document.createElement('label');
+    if(fordatid==0&&button==0){labe2l.innerHTML=`<input type="radio" id="huey" name="drone" value="huey"  />
+        <span class="infinitive">accepteret</span>  <span class="nutid">${nutid}</span><span class="datid">${datid}</span>
+        <span class="fornutid">${fornutid}</span>`;
+        
+}
+else if(button==0){labe2l.innerHTML=`<input type="radio" id="huey" name="drone" value="huey"  />
+        <span class="infinitive">accepteret</span>  <span class="nutid">${nutid}</span><span class="datid">${datid}</span>
+        <span class="fornutid">${fornutid}</span><span class="fornutid">${fordatid}</span><span class="tag"></span>`;
+        
+}
+
+
+else if(fordatid==0){
+  labe2l.innerHTML=`<input type="radio" id="huey" name="drone" value="huey"  />
+        <span class="infinitive">accepteret</span>  <span class="nutid">${mas[i]}</span><span class="datid">${mas[i+=1]}</span>
+        <span class="fornutid">${mas[i+=1]}</span>  
+        <span class="translate-nutid">${mas[i+=1]}</span> <span class="translate-datid">${mas[i+=1]}</span>
+        <button class="btn">...</button>`;
+}
+
+
+else{ div.innerHTML= `<div class="anfinitiv">${anfinitiv}</div><div class="nutid">${nutid}</div>
+    <div class="datid">${datid}</div><div class="fornutid">${fornutid}</div>
+    <div class="fordatid">${fordatid}</div><div class="bydem">${bydem}</div>
+    <button>uh</button>`;}
+   q.appendChild(labe2l);
+}
+let ii=0;
+let r=0;
+let f=0;
+let ord=[[0,1,2],[1,2,3,4]];
+ord[0][0]=`uhrhfeugihoj
+wofihofnbwiohpn`;
+
+ord[0][1]=`u2hrhfeugihoj
+wofihofnbwiohpn`;
+ord[0][2]=`uhrhfeugihoj
+wofihofnbwiohpn
+wjjfepjwpfw
+wfwpmfpwjfwnf
+wfwnfpwnfownfowfo`;
+
+function foo(infinitiv,nutid,datid,button,fornutid,fordatid,translatefordatid,tag,translatenutid,translatedatid,translatefornutid){
+  if(fordatid==4){
+    return `<input type="radio" id="huey" name="drone" value="huey"  />
+        <span class="infinitive">${infinitiv}</span>  <span class="nutid5">${nutid}</span><span class="datid5">${datid}</span>
+        <span class="fornutid">${fornutid}</span>
+        <span class="translate-nutid">${translatenutid}</span> <span class="translate-datid">${translatedatid}</span><span class="translate-fornutid">${translatefornutid}</span>
+        `;
+}
+else if(translatenutid!=0){
+    return `<input type="radio" id="huey" name="drone" value="huey"  />
+  <span class="infinitive">${infinitiv}</span><span class="datid">${datid}</span>  <span class="nutid2">${nutid}</span> 
+        <span class="translate-nutid2">${translatenutid}</span> <span class="translate-datid2">${translatedatid}</span> `;
+}
+else  if(fornutid==2){
+  return `<input type="radio" id="huey" name="drone" value="huey"  />
+  <span class="infinitive">${infinitiv}</span> <span class="nutid">${nutid}</span>
+ <span class="fordatid">${fordatid}</span>
+<span class="translate-fordatid">${translatefordatid}</span><span class="tag">${tag}</span>
+        `;
+}
+else  if(fornutid==3){
+  return `<input type="radio" id="huey" name="drone" value="huey"  />
+  <span class="infinitive">${infinitiv}</span> <span class="nutid4">${nutid}</span>
+ <span class="fordatid">${fordatid}</span>
+<span class="translate-fordatid">${translatefordatid}</span><span class="tag">${tag}</span>
+        `;
+}
+else if(translatedatid!=0){
+  return `<input type="radio" id="huey" name="drone" value="huey"  />
+  <span class="infinitive">${infinitiv}</span><span class="datid">${datid}</span>  <span class="nutid2">${nutid}</span>
+        <span class="translate-nutid2">${translatenutid}</span> <span class="translate-datid2">${translatedatid}</span> `;
+}
+else if(fornutid==1){
+  return `<input type="radio" id="huey" name="drone" value="huey"  />
+  <span class="infinitive">${infinitiv}</span><span class="datid">${datid}</span>  <span class="nutid2">${nutid}</span>  <span class="fordatid">${fordatid}</span>
+<span class="translate-fordatid">${translatefordatid}</span><span class="tag">${tag}</span> `;
+}
+else   if(fornutid==2&&button==1){
+  return `<input type="radio" id="huey" name="drone" value="huey"  />
+  <span class="infinitive">${infinitiv}</span> <span class="nutid">${nutid}</span>
+        `;
+}
+
+else if(datid==0&&button==0){  return `<input type="radio" id="huey" name="drone" value="huey"  />
+        <span class="infinitive">${infinitiv}</span>  <span class="nutid4">${nutid}</span>
+      `;
+}
+
+else if(button==0){  return `<input type="radio" id="huey" name="drone" value="huey"  />
+        <span class="infinitive">${infinitiv}</span><span class="datid">${datid}</span>  <span class="nutid2">${nutid}</span>
+      `;
+}
+else if(datid==0){  return `<input type="radio" id="huey" name="drone" value="huey"  />
+        <span class="infinitive">${infinitiv}</span> <span class="nutid">${nutid}</span>
+      `;
+}
+else{
+  return `<input type="radio" id="huey" name="drone" value="huey"  />
+        <span class="infinitive">${infinitiv}</span> <span class="datid">${datid}</span>  <span class="nutid2">${nutid}</span>
+      `;
+
+}
+
+}
+
+ord[1][1]=`1
+1
+1
+1
+1
+1
+`;
+// 5 strok po 42 bukBe
+let mm=[
+  [1,  `nemlig = точно, діїсно.
+  використовуется для подальшого уточнення   
+  теми розмови.
+  переклад цого слова є контекстним,
+  і може трішки відрізнятися, але не сильно.`],
+  [1,  `siden = з якогось моменту часу`],
+ 
+  [1,  `selv om можно писати selvom =хоча, навіть
+  переклад цого слова є контекстним,
+  і може трішки відрізнятися, але не сильно.`],
+  [2,    `altså= означає, діїсно,
+  використовуется для висновку чи 
+  пояснення логічних наслідків, уточненя,
+   підсомування теми.
+  `,`переклад цого слова є контекстним,
+  і може трішки відрізнятися, але не сильно.`],
+  
+  [2,`sammen= разом
+  може виражати взаємне спілкування,
+  зіткнення, купа речей-людей, змішування,
+  згорнути, 
+  `,`ще є один переклад.
+  дві або більше речей-людей які вступають в
+  тісний контакт. що значитиме цей контакт
+  залежить від контексту.
+  `],
+  /*[1, `med= з
+  `],  з*/ 
+  [1,`stadig =все.ще,
+  постійне зростання в постійному напрямку`],
+  [3,`af
+  це дуже важливе слово, воно є майже всюди.
+  Дуже часто в словотворі.
+  використовується
+   коли щось відокремлене від чогось, знято,
+    перенесено.`,
+    `Ще використовується коли рухаетесь від...
+     Чи якщо дію виконано повністю, завершено.
+     Поділ, маркування окремих розмірів.
+     Використовується при вказівці 
+     копіювання з шаблону.
+    
+    `,
+    `Ще використовується коли щось 
+    наприклад дощь, слабшає, сменшується.
+    
+    
+    ` ],
+  /*[1, `ved
+  разом, у зв'язку з чимось,
+  взяти, зачепити.
+  Може використовуєтся коли вказує що умова
+  зберігається. `],*/
+  [1,`omkring= довкола, росповсюджено
+  в деяких випадках  може мати значення=
+  щось позкидане по всій... ' території ' ,
+  може використовуватися для того щоб
+  вказати на щось постіїне або повторюване,
+  іноді може значити  обернутися кудись.
+  `],
+  [3, ` så = так, отже, потім
+  ви можете використовувати så як так, отже
+  незамислюючись, і це буде правильно,
+  але всеж краще розібратися 
+  `,`så = Використовується
+   щоб підкреслити щось, 
+   або підкреслити що щось відбулося,
+   чи як додаток до щойно згаданого,
+`  ,` може використовуватися у зв'язку з
+   проханням чи наказом для вираження
+   нетерпіння чи роздратування.
+   Може використовуватися як подив.`],
+  /* [1, `nogen sinde= будь коли, будь-який час
+   часто використовується із запереченням 
+   або обмеженням, запитанням чи порівнянням
+   `],*/
+   [3,    1,2,3],
+   [3,    1,2,3],
+   [3,    1,2,3],
+   [3,    1,2,3],
+   [3,    1,2,3],
+   [3,    1,2,3],
+   [3,    1,2,3],
+   [3,    1,2,3],
+  [3,    1,2,3],
+  [4,   `wfegrtrf
+  efgrfe
+  efg   vgyhujnbdhvgscfdgysuhjfbdvdwetrthgrteg
+  rfe
+  ofehirjofwojihugyfyguhnbeguh`,
+  `ihegh
+  wfihwfhiw
+  wofwfhfiw`,'grytyj','defgr']];
+
+
+let u=1;
+  let mas=[
+//infinitive    nutid      datid       button     fornutid      fordatid  tr-fordatid  tag    tr-nutid  tr-datid   tr-fornutid 
+'nemlig',     'точно',    'діїсно',      0,           0,        '5',          0,        0,        0,       0,        0,
+'ofte',     'часто',         0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'siden',     'з...',         0,          0,           0,        'wer',        0,       'vb',      0,        0,        0,
+'derhen', 'таким.чином',   'там',        1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'derfor',     'тому',        0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'elers',     'тобто',      'отже',       1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'ikke',       'не',          0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'tit',       'часто',        0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'når',        'коли',        0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'at',          'що',         0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'hvor',        'де',         0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'hvorfor',     'чому',       0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'fordi',     'тому.що',      0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'selv om',     'хоча',    'навіть',      0,           0,        'wer',        0,       'vb',      0,        0,        0,
+'',         '',      '',        1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'måske',     'може.бути',    0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'hvem',        'хто',        0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'hvornår',     'коли',       0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'hvordan',     'як',         0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'fortsat',   'продовжуе', 'все.ще',      1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'allerede',     'вже',       0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'overalt',     'всюди',      0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'altså',       'діїсно', 'означає',      0,           0,        'wer',        0,       'vb',      0,        0,        0,
+'kanhænde',   'можливо', 'може.вути',    1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'ligesom',     'як',         0,          1,           2,       'ligesom',   'як',     'konj',     0,        0,        0,
+'ingen sinde','ніколи',      0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'altid',     'завжди',       0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'aldrig',     'ніколи',      0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'næppe',     'навряд',    'ледве',       1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'bagefter',  'потім',    'згодом'  ,     1,           1,      'bagefter', 'відствати', 'præp',    0,        0,        0,
+'sammen',     'разом',       0,          0,           0,        'wer',        0,       'vb',      0,        0,        0,
+'til',         'до',         0,          1,           2,        'til',      'до',      'konj',    0,        0,        0,//*****
+//'med',         'з',        0,          0,           0,        'wer',        0,       'vb',      0,        0,        0,
+'netop',     'точно',        0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'lidt',     'mindst',     'mindre',      1,           0,        'wer',        1,       'vb', 'най.менше','трохи',     1,
+'cirka',     'приблизно',    0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'oppefra',     'зверху',     0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'nedefra',     'знизу',      0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'stadig',     'все.ще',      0,          0,           0,        'wer',        0,       'vb',      0,        0,        1,
+//'hermed',     'при.цому',          0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'bare',     'просто',     'лише',        1,          1,        'bar',      'голий',   'adj',      0,        0,        0,
+'af',     'читайте.опис',    0,          0,           3,        'af',        'із',       'præp',      0,        0,        0,
+//'for',      'тест',          0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+//'ved',         'у',          0,          0,           3,        'ved',        '',       'præp',      0,        0,        0,
+'således',     'таким.чином',             0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'selv',     'не.більше.ніж',    'навіть'   ,     1,          1,'selv',      'сам',   'pron',      0,        0,        0,
+'alligevel',     'тим.не.менш',     'все.таки'     ,              1,          0,        'wer',        1,       'vb',      0,        0,        1,
+'omkring', 'довкола', 'росповсюдж.',     0,           1,       'omkring',  'довкола', 'pronomer',  0,        0,        0,
+'så',         'отже',      'так',        0,           1,        'så',        'так',       'konj',      0,        0,        0,
+//'nogen sinde',     'все.ще',      0,          0,           0,        'wer',        0,       'vb',      0,        0,        1,
+// 
+'knap',         'ледве',      'майже',        1,           1,        'knappe',        '...',       'vb',      0,        0,        0,
+'herfra',     'звідси',          0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'тест',     'тест',          0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'тест',     'тест',          0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'тест',     'тест',          0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'тест',     'тест',          0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'тест',     'тест',          0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'тест',     'тест',          0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'тест',     'тест',          0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'тест',     'тест',          0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'тест',     'тест',          0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'тест',     'тест',          0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'тест',     'тест',          0,          1,           0,        'wer',        0,       'vb',      0,        0,        0,
+'тест',     'тест',          0,          1,           0,        'wer',        0,       'vb',      0,        0,        0
+]       
+  for(let i=0;i<mas.length;i++){        
+    const  q=document.querySelector('.q');
+        const labe2l=document.createElement('label');
+     labe2l.classList.add('container')
+     labe2l.innerHTML=foo(mas[i],mas[i+=1],mas[i+=1],mas[i+=1],mas[i+=1],mas[i+=1],mas[i+=1],mas[i+=1],mas[i+=1],mas[i+=1],mas[i+=1])
+const con=document.getElementsByClassName('container')
+     
+mas[i-=7];if(mas[i]==0){
+  const btn=document.createElement('button');
+        btn.classList.add('btn');
+        btn.innerHTML='...'
+        btn.setAttribute('id',ii);
+        labe2l.appendChild(btn); 
+        btn.addEventListener('click',()=>{r=1;let indd=btn.id;console.log(indd)
+          const divv=document.createElement('div');
+          divv.classList.add('page');
+          divv.innerHTML=`<div class="info"></div>`
+          document.body.appendChild(divv);
+          const btnX=document.createElement('button');
+          const page=document.querySelector('.page');
+          page.classList.add('pagebtn')
+          page.setAttribute('id','id2');
+          btnX.innerHTML='X';
+          btnX.classList.add('i');
+          page.appendChild(btnX);
+          btnX.addEventListener('click',()=>{
+            const m=document.getElementsByClassName('pagebtn');const m2=document.getElementById('id2');
+const paa2=m2.parentNode;
+paa2.removeChild(m2);
+          });
+          const textt=document.querySelector('.info');
+          const pagination=document.createElement('span');
+          pagination.classList.add('pagination');
+         let index=document.getElementsByClassName('btn');
+          pagination.innerText=mm[indd][r];
+          textt.appendChild(pagination);
+          const plus=document.createElement('button');
+          const minus=document.createElement('button');
+          const txt=document.createElement('span');
+          plus.classList.add('plus');
+          minus.classList.add('minus');
+          txt.classList.add('txt');
+          plus.innerHTML='>';
+          txt.innerText='1'+'/'+mm[indd][0];
+          minus.innerHTML='<';
+         console.log(indd,r);if(mm[indd][0]==1){} else{
+          textt.appendChild(minus);
+          textt.appendChild(plus);
+          textt.appendChild(txt);} 
+         plus.addEventListener('click',()=>{   r++; if(r>=mm[indd][0]){r=mm[indd][0]} console.log(f,r);      pagination.innerText=mm[indd][r];  txt.innerText=r+'/'+mm[indd][0];
+          textt.appendChild(pagination);});
+          minus.addEventListener('click',()=>{   r--;if(r<=1){r=1} console.log(f,r);     pagination.innerText=mm[indd][r];txt.innerText=r+'/'+mm[indd][0];
+          textt.appendChild(pagination);});
+        });     ii++;}mas[i+=7];
+
+q.appendChild(labe2l);
+        
+      
+      
+   
+}
+
+document.querySelector('#elastic').oninput = function(){
+  let val = this.value.trim().toLocaleLowerCase();
+    let elasticItems = document.querySelectorAll('.q .container');
+    if (val != ''){
+        elasticItems.forEach(function(elem){
+          if (elem.innerText.search(val) == -1) {
+            elem.classList.add('hide');
+          }   
+          else { 
+            elem.classList.remove('hide');
+          }
+        });
+    }
+  }
+
+  function inserMark(string,pos,len ){
+    return string.slice(0, pos)+ '<mark>' + string.slice(pos, pos+len) + '</mark>'+string.slice(pos+len);
+
+  }
+
+
+
+</script>
+
+</body>
+</html>
